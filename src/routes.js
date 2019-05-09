@@ -11,7 +11,7 @@ routes.get('/', (req,res) =>{
 
 routes.get('/carteira/', (req,res) =>{
 
-  return res.send("carteira");
+  return res.render("carteira");
   
 })
 
