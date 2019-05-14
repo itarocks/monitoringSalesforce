@@ -1,3 +1,36 @@
-{% extends "_layouts/default.njk" %}
-{% block body %}
-{% endblock %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+     <title>SalesMonitor</title>
+  </head>
+  <body>
+    <canvas class="line-chart"></canvas>
+       
+        <script>
+        var ctx = document.getElementsByClassName("line-chart");
+        var chartGraph = new Chart(ctx,{
+            type: 'line',
+            data:{
+              labels:["JAN","FEV","MAR"],
+              datasets:[{
+                label: "Credenciamentos - 2019",
+                data: [5,6,7],
+                borderWidth: 6,
+                borderColor: 'rgba(77,166,253,0.85)',
+                backgroundColor: 'transparent',
+              }]
+            }
+        });
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->   
+
+      
+  </body>
+</html>
